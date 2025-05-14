@@ -2,7 +2,7 @@
     "name": "CardStore",
     "short_name": "CardStore",
     "id": "CardStore",
-    "start_url": "/",
+    "start_url": "/CardStore",
     "display": "standalone",
     "orientation": "portrait",
     "icons": [
