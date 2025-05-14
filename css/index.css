@@ -1,0 +1,150 @@
+h1 {
+    margin-block: 0.5rem;
+}
+
+#header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+#header > div {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+
+#import-button,
+#export-button {
+    width: 1.75rem;
+    height: 1.75rem;
+    color: accentcolor;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: 75%;
+    background-position: 50% 50%;
+}
+
+#import-button {
+    background-image: url("../icons/import.svg");
+}
+
+#export-button {
+    background-image: url("../icons/export.svg");
+}
+
+#add-button {
+    position: fixed;
+    bottom: 2rem;
+    right: 1rem;
+    width: 4rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: none;
+    background-image: url("../icons/plus.svg");
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: 50% 50%;
+}
+
+#search-bar {
+    width: 100%;
+}
+
+div:has(#search-bar) {
+    & {
+        position: relative;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        right: 0.5rem;
+        top: 25%;
+        height: 50%;
+        aspect-ratio: 1;
+        background-image: url("../icons/search.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+#container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-block: 1rem;
+}
+
+#cards-grid {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.65rem;
+}
+
+.card {
+    background-color: var(--card-color, lightgray);
+    border-radius: 0.75rem;
+    height: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333333;
+    text-overflow: ellipsis;
+    font-size: 1.1em;
+    font-weight: 500;
+    text-shadow: 0px 0px 4px #FFFFFF88;
+}
+
+dialog > h2 {
+    margin-top: 0;
+}
+
+dialog button {
+    background: none;
+    color: accentcolor;
+}
+
+#export-dialog > button {
+    display: block;
+    margin-top: 1rem;
+    margin-inline: auto;
+}
+
+#export-dialog-data-text {
+    display: block;
+    max-width: 100%;
+    overflow-x: scroll;
+    text-overflow: ellipsis;
+}
+
+#import-dialog > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 1rem;
+}
+
+#import-dialog-input {
+    width: 100%;
+}
+
+@media (prefers-color-scheme: light) {
+    #add-button {
+        background-color: white;
+        box-shadow: 0px 0px 4px 0px #ccc;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    #add-button {
+        background-color: #222;
+        box-shadow: 0px 0px 4px 0px #444;
+    }
+}

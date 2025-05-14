@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="theme-color" content="#ffffff">
+    <title>Aggiungi tessera</title>
+    <link rel="apple-touch-icon" sizes="96x96" href="icons/logo-96.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="icons/logo-120.png">
+    <link rel="apple-touch-icon" sizes="128x128" href="icons/logo-128.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="icons/logo-152.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="icons/logo-192.png">
+    <link rel="apple-touch-icon" sizes="256x256" href="icons/logo-256.png">
+    <link rel="apple-touch-icon" sizes="512x512" href="icons/logo-512.png">
+    <link rel="icon" sizes="96x96" href="icons/logo-96.png">
+    <link rel="icon" sizes="120x120" href="icons/logo-120.png">
+    <link rel="icon" sizes="128x128" href="icons/logo-128.png">
+    <link rel="icon" sizes="152x152" href="icons/logo-152.png">
+    <link rel="icon" sizes="192x192" href="icons/logo-192.png">
+    <link rel="icon" sizes="256x256" href="icons/logo-256.png">
+    <link rel="icon" sizes="512x512" href="icons/logo-512.png">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/add.css">
+    <link rel="manifest" href="manifest.json" type="application/manifest+json">
+</head>
+<body>
+    <div id="header">
+        <button id="back-button"></button>
+        <button id="done-button">Fine</button>
+    </div>
+    <h1>Aggiungi tessera</h1>
+    <form id="form">
+        <label for="nome">Nome tessera</label>
+        <input type="text" name="nome" id="nome" required>
+        <label>Numero tessera</label>
+        <input type="text" name="numero" id="numero" required>
+        <label>Colore tessera</label>
+        <div id="colors-container">
+            <input type="color" name="colore" id="colore" value="#d3d3d3">
+            <button type="button" data-color="#f5695f" style="--color: #f5695f;"></button>
+            <button type="button" data-color="#ffcfcc" style="--color: #ffcfcc;"></button>
+            <button type="button" data-color="#ffbb00" style="--color: #ffbb00;"></button>
+            <button type="button" data-color="#f0dc2f" style="--color: #f0dc2f;"></button>
+            <button type="button" data-color="#7ad83b" style="--color: #7ad83b;"></button>
+            <button type="button" data-color="#5aaf21" style="--color: #5aaf21;"></button>
+            <button type="button" data-color="#36c984" style="--color: #36c984;"></button>
+            <button type="button" data-color="#4cc9f0" style="--color: #4cc9f0;"></button>
+            <button type="button" data-color="#3f8feb" style="--color: #3f8feb;"></button>
+        </div>
+    </form>
+    <div id="card-preview" placeholder="Nome tessera"></div>
+
+    <script src="js/add.js"></script>
+</body>
+</html>

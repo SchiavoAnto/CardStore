@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="theme-color" content="#ffffff">
+    <title>CardStore</title>
+    <link rel="apple-touch-icon" sizes="96x96" href="icons/logo-96.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="icons/logo-120.png">
+    <link rel="apple-touch-icon" sizes="128x128" href="icons/logo-128.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="icons/logo-152.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="icons/logo-192.png">
+    <link rel="apple-touch-icon" sizes="256x256" href="icons/logo-256.png">
+    <link rel="apple-touch-icon" sizes="512x512" href="icons/logo-512.png">
+    <link rel="icon" sizes="96x96" href="icons/logo-96.png">
+    <link rel="icon" sizes="120x120" href="icons/logo-120.png">
+    <link rel="icon" sizes="128x128" href="icons/logo-128.png">
+    <link rel="icon" sizes="152x152" href="icons/logo-152.png">
+    <link rel="icon" sizes="192x192" href="icons/logo-192.png">
+    <link rel="icon" sizes="256x256" href="icons/logo-256.png">
+    <link rel="icon" sizes="512x512" href="icons/logo-512.png">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="manifest" href="manifest.json" type="application/manifest+json">
+</head>
+<body>
+    <div id="header">
+        <h1>CardStore</h1>
+        <div>
+            <button id="import-button" onclick="showImportDialog();"></button>
+            <button id="export-button" onclick="exportData();"></button>
+        </div>
+    </div>
+    <div>
+        <input type="text" id="search-bar" placeholder="Cerca">
+    </div>
+    <div id="container">
+        <div id="cards-grid"></div>
+    </div>
+    <button id="add-button" onclick="window.location.replace('add.html')"></button>
+
+    <dialog id="export-dialog">
+        <h2>Export dei dati</h2>
+        <p>Copia il testo in basso e salvalo in un posto sicuro.</p>
+        <code id="export-dialog-data-text"></code>
+        <button onclick="closeExportDialog();">OK</button>
+    </dialog>
+    <dialog id="import-dialog">
+        <h2>Import dei dati</h2>
+        <p>Inserisci la stringa di dati salvata in precedenza.</p>
+        <input type="text" id="import-dialog-input" autofocus>
+        <div>
+            <button onclick="closeImportDialog(false);">Annulla</button>
+            <button onclick="closeImportDialog(true);">OK</button>
+        </div>
+    </dialog>
+
+    <script src="js/app.js" defer></script>
+    <script>
+        // if ("serviceWorker" in navigator) {
+        //     navigator.serviceWorker.register("worker.js").then(
+        //         (registration) => {
+        //             console.log("Service worker registration successful:", registration);
+        //         },
+        //         (error) => {
+        //             console.error("Service worker registration failed:", error);
+        //         }
+        //     );
+        // } else {
+        //     console.error("Service workers are not supported on this browser.");
+        //     alert("Your browser is too old for this web app to work offline. Please update it.");
+        // }
+    </script>
+</body>
+</html>
