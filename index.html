@@ -58,19 +58,19 @@
 
     <script src="js/app.js" defer></script>
     <script>
-        // if ("serviceWorker" in navigator) {
-        //     navigator.serviceWorker.register("worker.js").then(
-        //         (registration) => {
-        //             console.log("Service worker registration successful:", registration);
-        //         },
-        //         (error) => {
-        //             console.error("Service worker registration failed:", error);
-        //         }
-        //     );
-        // } else {
-        //     console.error("Service workers are not supported on this browser.");
-        //     alert("Your browser is too old for this web app to work offline. Please update it.");
-        // }
+        if ("serviceWorker" in navigator) {
+            navigator.serviceWorker.register("worker.js").then(
+                (registration) => {
+                    console.log("Service worker registration successful:", registration);
+                },
+                (error) => {
+                    console.error("Service worker registration failed:", error);
+                }
+            );
+        } else {
+            console.error("Service workers are not supported on this browser.");
+            alert("Your browser is too old for this web app to work offline. Please update it.");
+        }
     </script>
 </body>
 </html>
